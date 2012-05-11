@@ -1,0 +1,8 @@
+name = West Brisbane Greens
+description = Handles general site configuration for administrators.
+package = Core
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/layout.css

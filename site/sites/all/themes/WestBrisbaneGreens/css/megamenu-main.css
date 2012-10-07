@@ -1,0 +1,8 @@
+ul#megamenu-main-menu h2 a{
+	text-decoration:none;
+	font-size:18px;
+}
+
+ul#megamenu-main-menu li.megamenu-parent {
+	margin-right:15px;
+}

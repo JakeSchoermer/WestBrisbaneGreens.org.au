@@ -1,0 +1,5 @@
+name = West Brisbane Greens Contact Form
+description = A Custom Contact form for use on the West Brisbane Greens Website
+core = 7.x
+
+files[] = wbg_contact_form.module

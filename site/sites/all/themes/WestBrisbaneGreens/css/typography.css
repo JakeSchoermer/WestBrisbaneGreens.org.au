@@ -1,0 +1,7 @@
+p,a, h1, h2, h3, h4, h5, h6, address, cite, span {
+	font-family: Arial, sans-serif;
+}
+
+#content p {
+	font-size:14px;
+}

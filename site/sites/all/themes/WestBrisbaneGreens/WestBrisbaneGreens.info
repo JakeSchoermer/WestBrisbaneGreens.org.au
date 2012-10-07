@@ -1,8 +1,27 @@
 name = West Brisbane Greens
-description = Handles general site configuration for administrators.
-package = Core
-version = VERSION
+description = West Brisbane Greens Default Theme. See README.markdown for more information.
 core = 7.x
 engine = phptemplate
 
 stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/typography.css
+stylesheets[all][] = css/megamenu-main.css
+
+
+regions[header] = Header
+
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[featured] = Featured
+regions[main_content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer

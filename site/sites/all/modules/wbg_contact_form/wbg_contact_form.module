@@ -1,0 +1,62 @@
+<?php
+	
+/**
+ * @file
+ * West Brisbane Greens Contact Form
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function wbg_contact_form_menu() {
+  $items['wbg_contact_form'] = array(
+    'title' => '',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('wbg_contact_form_nameform'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM
+);
+  return $items;
+}
+/**
+ * Define a form.
+ */
+function wbg_contact_form_nameform() {
+  $form['name'] = array(
+    '#title' => t('Name'),
+    '#type' => 'textfield',
+    '#description' => t('Please enter your name.'),
+  );
+
+ $form['email'] = array(
+ 	'#title' => t('Email Address'),
+	'#type' => 'textfield',
+	'#description' => t('Please enter your email address')
+ );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit')
+  );
+  return $form;
+}
+/**
+ * Validate the form.
+ */
+function wbg_contact_form_nameform_validate($form, &$form_state) {
+  if ($form_state['values']['name'] == 'King Kong') {
+    // We notify the form API that this field has failed validation.
+    form_set_error('name',
+      t('King Kong is not allowed to use this form.'));
+  }
+}
+/**
+ * Handle post-validation form submission.
+ */
+function wbg_contact_form_nameform_submit($form, &$form_state) {
+  $name = $form_state['values']['name'];
+  drupal_set_message(t('Thanks for filling out the form, %name',
+    array('%name' => $name)));
+}
+
+?>
